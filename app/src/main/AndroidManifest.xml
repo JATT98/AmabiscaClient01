@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmabiscaClient">
         <activity
+            android:name=".Activity.AccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.LogInActivity"
             android:exported="false" />
         <activity
@@ -27,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity"></activity>
+        <activity android:name=".Activity.MainActivity" />
     </application>
 
 </manifest>

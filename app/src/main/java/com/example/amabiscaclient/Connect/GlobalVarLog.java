@@ -36,6 +36,17 @@ public class GlobalVarLog {
     public  String get_sexo() {return _sexo;}
     public  void set_sexo(String _sexo) {GlobalVarLog._sexo = _sexo;}
 
+    public void restart(){
+        _codigo     = 0;
+        _nombre     = "";
+        _dni        = "";
+        _direccion  = "";
+        _telefono   = "";
+        _correo     = "";
+        _fnacimiento= "";
+        _sexo       = "";
+    }
+
 
     public static synchronized GlobalVarLog getInstance() {
         if (instance == null) {

@@ -17,8 +17,6 @@ public class ConnectPostgresql {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
 
-            DriverManager.registerDriver(new org.postgresql.Driver());
-            con = DriverManager.getConnection("jdbc:postgresql://10.0.2.2:5432/amabisca", "postgres", "Admin123");
         }catch (Exception e){
             System.err.println("Error: "+ e.toString());
         }
