@@ -16,6 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmabiscaClient">
         <activity
+            android:name=".Activity.CreditCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.StoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.AccountActivity"
             android:exported="false" />
         <activity

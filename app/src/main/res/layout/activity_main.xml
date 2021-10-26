@@ -54,6 +54,7 @@
                 android:background="#C6C8C9">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/storeBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="24dp"
@@ -107,6 +108,7 @@
                 android:background="#C6C8C9">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/accountBtn"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginStart="160dp"
@@ -161,6 +163,7 @@
                 android:background="#C6C8C9">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/infoBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginStart="24dp"
@@ -251,6 +254,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/storeBtn1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -319,6 +323,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/infoBtn1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"

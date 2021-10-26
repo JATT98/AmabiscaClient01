@@ -20,6 +20,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(IntroActivity.this, MainActivity.class));
+                finish();
             }
         });
     }

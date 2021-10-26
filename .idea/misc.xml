@@ -5,11 +5,22 @@
       <map>
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.203125" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/drawable/blue_button_background.xml" value="0.246875" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/drawable/card_background.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/drawable/ic_launcher_background.xml" value="0.203125" />
-        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_account.xml" value="0.12182971014492754" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_account.xml" value="0.2" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_cart.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_credit_card.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_detail_product.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_edit_account.xml" value="0.264" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_intro.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/activity_store.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/credit_card_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/custom_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/detail.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/item.xml" value="0.264" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/layout/item_cart.xml" value="0.264" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/menu/menu_main.xml" value="0.275" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/AmabiscaClient/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2911458333333333" />
       </map>

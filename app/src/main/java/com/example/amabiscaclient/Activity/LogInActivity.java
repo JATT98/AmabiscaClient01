@@ -67,7 +67,7 @@ public class LogInActivity extends AppCompatActivity {
 
     public void LogIn(String User, String Pass) {
 
-        String URL = "http://192.168.25.246:3000/getUser";
+        String URL = var.get_URLconnection() + "getUser";
 
         JSONObject jsonObject=new JSONObject();
         try {
@@ -89,6 +89,8 @@ public class LogInActivity extends AppCompatActivity {
                             Log.d("RESULT: ", jsonObject.toString());
                             try {
                                 Integer     _codigo     =jsonObject.getInt("_codigo");
+                                String      _usuario    =jsonObject.getString("_user");
+                                String      _clave      =jsonObject.getString("_pass");
                                 String      _nombre     =jsonObject.getString("_nombre");
                                 String      _dni        =jsonObject.getString("_dni");
                                 String      _direccion  =jsonObject.getString("_direccion");
@@ -108,12 +110,13 @@ public class LogInActivity extends AppCompatActivity {
                                     var.set_telefono(_telefono);
                                     var.set_fnacimiento(_nacimiento);
                                     var.set_sexo(_sexo);
+                                    var.set_usuario(_usuario);
+                                    var.set_clave(_clave);
                                     Log.e("RESULT: ",_msj);
 
                                     Toast.makeText(getApplicationContext(),"BIENVENIDO "+ _nombre,Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(LogInActivity.this, MainActivity.class));
-                                    //Intent menu=new Intent(this,activity_menu.class);
-                                    //startActivity(menu);
+                                    finish();
 
                                 }else{
                                     Log.e("ERROR: ",_msj);
@@ -135,21 +138,7 @@ public class LogInActivity extends AppCompatActivity {
             requestQueue.add(jsonObjectRequest);
 
 
-            /*
-                if(_msj.equals("OK")){
 
-                var.set_codigousuario(_codigo);
-                var.set_datos(_datos);
-                var.set_direccion(_direccion);
-                var.set_email(_email);
-                var.set_telefono(_telefono);
-
-                Intent menu=new Intent(this,activity_menu.class);
-                startActivity(menu);
-
-            }else{
-                Toast.makeText(getApplicationContext(),_msj,Toast.LENGTH_SHORT).show();
-            }*/
         }catch (Exception e){
             Toast.makeText(getApplicationContext(),e.toString(), Toast.LENGTH_SHORT).show();
         }
