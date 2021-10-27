@@ -60,6 +60,7 @@ public class CartActivity extends AppCompatActivity {
     RadioButton radioButton;
     private Dialog dialog;
     int radioId;
+    String msj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +88,9 @@ public class CartActivity extends AppCompatActivity {
                 Toast.makeText(CartActivity.this, "ORDEN PUBLICADA", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
 
-                if(radioId == 2131231243){
+                if(msj.equals("Depósito bancario")){
                     publishOder("Pendiente");
-                }else if(radioId == 2131231241){
+                }else if(msj.equals("Pago contra entrega")){
                     publishOder("Contra Entrega");
                 }
 
@@ -116,15 +117,17 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 radioId = radioGroup.getCheckedRadioButtonId();
-                String msj;
-                    if(radioId == 2131231243){
+                radioButton = findViewById(radioId);
+                msj = radioButton.getText().toString();
+
+                    if(msj.equals("Depósito bancario")){
                         dialogtitle.setText("PAGO BANCARIO");
                         dialogtext.setText("No. de cuenta: 1234567890 \n" +
                                 "Banco: Banrural \n" +
                                 "Tipo de cuenta: Monetaria\n\n" +
                                 "¿Está seguro de realizar su orden con este tipo de pago?");
                         dialog.show();
-                    }else if(radioId == 2131231242){
+                    }else if(msj.equals("Pago con tarjeta")){
 
                         startActivity(new Intent(CartActivity.this, CreditCardActivity.class));
 
@@ -134,7 +137,7 @@ public class CartActivity extends AppCompatActivity {
                         dialog.show();
                     }
 
-                radioButton = findViewById(radioId);
+
             }
         });
     }
