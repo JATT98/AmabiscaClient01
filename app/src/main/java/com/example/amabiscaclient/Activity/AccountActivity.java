@@ -80,7 +80,7 @@ public class AccountActivity extends AppCompatActivity {
         orderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AccountActivity.this, AccountActivity.class));
+                startActivity(new Intent(AccountActivity.this, OrderActivity.class));
 
             }
         });

@@ -18,6 +18,10 @@ public class GlobalVarLog {
     private  static  Double _totalOrder     = 0.0;
     private  static  String _URLconnection  = "http://192.168.25.246:3000/";
     private  static  Integer _deleteProduct = 0;
+    private  static  String  _phone         = "";
+
+    public static String get_phone() {return _phone;}
+    public static void set_phone(String _phone) {GlobalVarLog._phone = _phone;}
 
     public static Integer get_deleteProduct() {return _deleteProduct;}
     public static void set_deleteProduct(Integer _deleteProduct) {GlobalVarLog._deleteProduct = _deleteProduct;}
@@ -75,6 +79,7 @@ public class GlobalVarLog {
         _totalOrder  = 0.0;
         _clave       = "";
         _usuario     = "";
+        _phone       = "";
     }
 
 
