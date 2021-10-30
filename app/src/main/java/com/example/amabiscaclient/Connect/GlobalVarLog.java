@@ -7,6 +7,7 @@ public class GlobalVarLog {
     private  static  String _usuario        = "";
     private  static  String _clave          = "";
     private  static  String _nombre         = "";
+    private  static  String _apellido       = "";
     private  static  String _dni            = "";
     private  static  String _direccion      = "";
     private  static  String _telefono       = "";
@@ -45,6 +46,9 @@ public class GlobalVarLog {
 
     public  String get_nombre() {return _nombre;}
     public  void set_nombre(String _nombre) {GlobalVarLog._nombre = _nombre;}
+
+    public static String get_apellido() {return _apellido;}
+    public static void set_apellido(String _apellido) {GlobalVarLog._apellido = _apellido;}
 
     public  String get_dni() {return _dni;}
     public  void set_dni(String _dni) {GlobalVarLog._dni = _dni;}

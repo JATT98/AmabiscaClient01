@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.amabiscaclient.Connect.ClickButtonListener;
 import com.example.amabiscaclient.Connect.GlobalVarLog;
 import com.example.amabiscaclient.Connect.Order;
 import com.example.amabiscaclient.Connect.OrderAdapter;
@@ -41,12 +42,15 @@ public class OrderActivity extends AppCompatActivity {
     GlobalVarLog var =   GlobalVarLog.getInstance();
     private RecyclerView recyclerView;
     private List orderList;
+    private TextView phone2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
+        phone2 = findViewById(R.id.numberCall);
+        phone2.setText(var.get_phone());
         recyclerView = findViewById(R.id.orderView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -90,7 +94,12 @@ public class OrderActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
 
-                            OrderAdapter adapter = new OrderAdapter(OrderActivity.this , orderList);
+                            OrderAdapter adapter = new OrderAdapter(OrderActivity.this, orderList, new ClickButtonListener() {
+                                @Override
+                                public void Click() {
+                                    phone2.setText(var.get_phone());
+                                }
+                            });
 
                             recyclerView.setAdapter(adapter);
                         }
@@ -103,6 +112,12 @@ public class OrderActivity extends AppCompatActivity {
         });
 
         requestQueue.add(jsonArrayRequest);
+    }
+
+    @Override
+    public void onBackPressed() {
+        var.set_phone("");
+        super.onBackPressed();
     }
 
     private void CallButton(){

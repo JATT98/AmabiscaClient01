@@ -42,6 +42,8 @@ public class EditAccountActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.editEmailtxt);
 
         txtUser.setText(var.get_usuario());
+        txtName.setText(var.get_nombre());
+        txtLastName.setText(var.get_apellido());
         txtAddress.setText(var.get_direccion());
         txtEmail.setText(var.get_correo());
         txtPhone.setText(var.get_telefono());
@@ -101,7 +103,8 @@ public class EditAccountActivity extends AppCompatActivity {
                                 if(_msj.equals("DATOS ACTUALIZADOS CON ÉXITO")){
                                     var.set_usuario(txtUser.getText().toString());
                                     var.set_clave(txtNewPass.getText().toString());
-                                    var.set_nombre(txtName.getText().toString() + " " + txtLastName.getText().toString());
+                                    var.set_nombre(txtName.getText().toString());
+                                    var.set_apellido(txtLastName.getText().toString());
                                     var.set_correo(txtEmail.getText().toString());
                                     var.set_direccion(txtAddress.getText().toString());
                                     var.set_telefono(txtPhone.getText().toString());

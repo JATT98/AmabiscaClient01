@@ -30,12 +30,17 @@ import java.util.List;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderHolder>{
     GlobalVarLog var =   GlobalVarLog.getInstance();
 
+    private ManagementPhone managementPhone;
+    private ClickButtonListener clickButtonListener;
     private Context context;
     private List ordersList;
 
-    public OrderAdapter(Context context , List orders){
+    public OrderAdapter(Context context , List orders, ClickButtonListener clickButtonListener){
         this.context = context;
         ordersList = orders;
+        managementPhone = new ManagementPhone(context);
+        this.clickButtonListener = clickButtonListener;
+
     }
 
     @NonNull
@@ -56,10 +61,24 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderHolder>
         holder.phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                var.set_phone(order.get_telefono());
+                managementPhone.clickNumber(new ClickButtonListener() {
+                    @Override
+                    public void Click() {
+                        if (order.get_telefono().equals("")){
+                            var.set_phone("46463819");
+                        }else{
+                            var.set_phone(order.get_telefono());
+                        }
+                        clickButtonListener.Click();
+                    }
+                });
+
+
             }
         });
     }
+
+
 
     @Override
     public int getItemCount() {

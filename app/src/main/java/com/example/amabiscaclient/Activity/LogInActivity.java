@@ -92,6 +92,7 @@ public class LogInActivity extends AppCompatActivity {
                                 String      _usuario    =jsonObject.getString("_user");
                                 String      _clave      =jsonObject.getString("_pass");
                                 String      _nombre     =jsonObject.getString("_nombre");
+                                String      _apellido   =jsonObject.getString("_apellido");
                                 String      _dni        =jsonObject.getString("_dni");
                                 String      _direccion  =jsonObject.getString("_direccion");
                                 String      _telefono   =jsonObject.getString("_telefono");
@@ -104,6 +105,7 @@ public class LogInActivity extends AppCompatActivity {
 
                                     var.set_codigo(_codigo);
                                     var.set_nombre(_nombre);
+                                    var.set_apellido(_apellido);
                                     var.set_dni(_dni);
                                     var.set_direccion(_direccion);
                                     var.set_correo(_correo);
@@ -114,7 +116,7 @@ public class LogInActivity extends AppCompatActivity {
                                     var.set_clave(_clave);
                                     Log.e("RESULT: ",_msj);
 
-                                    Toast.makeText(getApplicationContext(),"BIENVENIDO "+ _nombre,Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"BIENVENIDO " + _nombre + " " + _apellido,Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(LogInActivity.this, MainActivity.class));
                                     finish();
 

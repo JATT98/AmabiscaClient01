@@ -67,6 +67,7 @@ public class AccountActivity extends AppCompatActivity {
                 var.set_totalOrder(0.0);
 
                 startActivity(new Intent(AccountActivity.this, CartActivity.class));
+                finish();
             }
         });
 

@@ -142,6 +142,12 @@ public class CartActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(CartActivity.this, AccountActivity.class));
+        finish();
+        super.onBackPressed();
+    }
 
     private void fetchCart() {
         String URL = var.get_URLconnection() + "cart/" + var.get_actualOrder();
